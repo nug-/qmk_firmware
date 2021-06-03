@@ -1,0 +1,3 @@
+RGBLIGHT_ENABLE ?= no
+BOOTMAGIC_ENABLE = lite
+BOOTLOADER = atmel-dfu
