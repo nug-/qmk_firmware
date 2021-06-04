@@ -1,4 +1,4 @@
-#include QMK_KEYBOARD_H
+#include QMK_KEYBOARD_H // Layout for Zenith
 
 #define LT_L1SP LT(_L1, KC_SPC) /* SPACE on tap, LAYER ONE on hold */
 #define LT_L1DE LT(_L1, KC_DEL) /* DELETE on tap, LAYER ONE on hold */
@@ -36,6 +36,20 @@ int cur_dance (qk_tap_dance_state_t *state);
 //for the x tap dance. Put it here so it can be used in any keymap
 void x_finished (qk_tap_dance_state_t *state, void *user_data);
 void x_reset (qk_tap_dance_state_t *state, void *user_data);
+
+/* 
+ * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┬───┐
+ * │MC0│MC1│ESC│ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ ( │ ) │ BKSPC │HOM│
+ * ├───┼───┼───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┼───┤
+ * │MC2│MC3│ TAB │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │ [ │ ] │  \  │PGU│
+ * ├───┼───┼─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┼───┤
+ * │MC4│MC5│ FUNC │ A │ S │ D │ F │ G │ H │ J │ K │ L │ ; │ ' │ ENTER  │PGD│
+ * ├───┼───┼──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┬───┼───┤
+ * │MC6│MC7│ SHIFT  │ Z │ X │ C │ V │ B │ N │ M │ , │ . │ / │SHIFT │UP │END│
+ * ├───┼───┼─────┬──┴┬──┴──┬┴───┴───┴───┴───┴───┴───┴───┴┬──┴──┬───┼───┼───┤
+ * │MC8│MC9│CTRL │GUI│ ALT │          SPACE (7u)         │ CTL │LFT│DWN│RGT│
+ * └───┴───┴─────┴───┴─────┴─────────────────────────────┴─────┴───┴───┴───┘
+ */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_L0] = LAYOUT_all(

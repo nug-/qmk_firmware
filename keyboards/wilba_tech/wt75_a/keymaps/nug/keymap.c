@@ -1,5 +1,4 @@
-// Default layout for WT75-A (Xeno)
-#include QMK_KEYBOARD_H
+#include QMK_KEYBOARD_H // layout for WT75-A (Xeno)
 
 #define LT_L1SP LT(_L1, KC_SPC) /* SPACE on tap, LAYER ONE on hold */
 #define LT_L1DE LT(_L1, KC_DEL) /* DELETE on tap, LAYER ONE on hold */

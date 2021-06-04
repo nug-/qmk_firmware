@@ -1,4 +1,4 @@
-#include QMK_KEYBOARD_H
+#include QMK_KEYBOARD_H // Layout for M6-A
 
 #define MACRO0 LCTL(LALT(LSFT(KC_Z))) /* Discord deafen toggle, ctrl+alt+shift+z */
 #define MACRO1 LGUI(KC_E) /* Open Directory Opus, win+e */

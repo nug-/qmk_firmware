@@ -1,5 +1,4 @@
-// Default layout for WT75-C (7V)
-#include QMK_KEYBOARD_H
+#include QMK_KEYBOARD_H // layout for WT75-C (7V)
 
 #define LT_L1SP LT(_L1, KC_SPC) /* SPACE on tap, LAYER ONE on hold */
 
