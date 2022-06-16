@@ -3,7 +3,7 @@
 ## How to build
 ```
 git clone https://github.com/nug-/qmk_firmware.git
-cd qmk_firmware-leeku
+cd qmk_firmware
 git submodule init
 git submodule update
 make git-submodule
