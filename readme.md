@@ -1,5 +1,14 @@
 # Quantum Mechanical Keyboard Firmware
 
+## How to build
+```
+git clone https://github.com/nug-/qmk_firmware.git
+cd qmk_firmware-leeku
+git submodule init
+git submodule update
+make git-submodule
+```
+
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
 [![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
 [![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
