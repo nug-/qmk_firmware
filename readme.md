@@ -8,6 +8,8 @@ git submodule init
 git submodule update
 make git-submodule
 git remote add upstream https://github.com/qmk/qmk_firmware.git
+git fetch upstream
+git merge upstream/master
 ```
 
 ## To copy keymaps from previous versions
