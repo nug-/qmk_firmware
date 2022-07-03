@@ -144,3 +144,26 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TCAP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset),
   [TALT] = ACTION_TAP_DANCE_DOUBLE(KC_RCTL, KC_RALT),
 };
+
+void keyboard_pre_init_user(void) {
+  setPinOutput(B7); // caps
+  setPinOutput(A5); // function
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+  switch (get_highest_layer(state)) {
+    case _L1:
+      break;
+    case _L2:
+      writePinLow(A5);
+      break;
+    case _L3:
+      writePinLow(B7);
+      break;
+    default:
+      writePinHigh(A5);
+      writePinHigh(B7);
+      break;
+  }
+  return state;
+}
