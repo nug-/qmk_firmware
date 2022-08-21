@@ -23,7 +23,8 @@ qmk compile -kb noxary/268_2_rgb -km nug # 268.2 white pcb (purple case) *1
 qmk compile -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -kb ai03/vega -km nug # vega *1
 qmk compile -kb converter/usb_usb -km nug_snow # f1-8k *1
-qmk compile -kb hineybush/h87a -km nug # frog/lz XE/salamander/tkl_one *4
+qmk compile -kb hineybush/h87a -km nug # frog/lz XE/salamander/tkl_one *3
+qmk compile -kb hineybush/h87a -km nug_lz_xe # lz XE *1
 qmk compile -kb hineybush/h88 -km nug # jance/kfe ce *2
 qmk compile -kb matrix/m20add -km nug # 2.0 additional *1
 qmk compile -kb matrix/me -km nug # matrix me *1
