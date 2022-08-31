@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# 27 lines, 36 total keyboards
+# 28 lines, 37 total keyboards
 qmk compile -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -kb noxary/220 -km nug # 220 *1
 qmk compile -kb xelus/valor/rev2 -km nug # nunu *1
 qmk compile -kb xelus/valor/rev1 -km nug # praxis *1
 qmk compile -kb projectkb/alice/rev2 -km nug # tengu *1
+qmk compile -kb fjlabs/midway60 -km nug # midway60 *1
 qmk compile -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -kb idb/idb_60 -km nug # idb60 *1
 qmk compile -kb hineybush/h60 -km nug # kei/ogre/palmetto *3 [unikorn (spares)]
@@ -23,7 +24,7 @@ qmk compile -kb noxary/268_2_rgb -km nug # 268.2 white pcb (purple case) *1
 qmk compile -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -kb ai03/vega -km nug # vega *1
 qmk compile -kb converter/usb_usb -km nug_snow # f1-8k *1
-qmk compile -kb hineybush/h87a -km nug # frog/lz XE/salamander/tkl_one *3
+qmk compile -kb hineybush/h87a -km nug # frog/salamander/tkl_one *3
 qmk compile -kb hineybush/h87a -km nug_lz_xe # lz XE *1
 qmk compile -kb hineybush/h88 -km nug # jance/kfe ce *2
 qmk compile -kb matrix/m20add -km nug # 2.0 additional *1

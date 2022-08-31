@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_L3] = LAYOUT(
   _______,  KC_NO,   KC_NO, 
-  KC_NO,    KC_NO,   RESET),
+  KC_NO,    KC_NO,   QK_BOOT),
 };
 
 int cur_dance (qk_tap_dance_state_t *state) {
