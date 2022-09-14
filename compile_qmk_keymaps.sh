@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# 29 lines, 37 total keyboards
+# 30 lines, 38 total keyboards
 qmk compile -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -kb noxary/220 -km nug # 220 *1
 qmk compile -kb xelus/valor/rev2 -km nug # nunu *1
 qmk compile -kb xelus/valor/rev1 -km nug # praxis *1
 qmk compile -kb projectkb/alice/rev2 -km nug # tengu *1
 qmk compile -kb fjlabs/midway60 -km nug # midway60 *1
+qmk compile -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -kb idb/idb_60 -km nug # idb60 *1
 qmk compile -kb hineybush/h60 -km nug # kei/ogre/palmetto *3 [unikorn (spares)]
