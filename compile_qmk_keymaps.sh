@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# 30 lines, 38 total keyboards
+# 32 lines, 40 total keyboards
 qmk compile -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -kb noxary/220 -km nug # 220 *1
 qmk compile -kb xelus/valor/rev2 -km nug # nunu *1
 qmk compile -kb xelus/valor/rev1 -km nug # praxis *1
 qmk compile -kb projectkb/alice/rev2 -km nug # tengu *1
+qmk compile -kb hineybush/h60_wideboi -km nug # rei *1
 qmk compile -kb fjlabs/midway60 -km nug # midway60 *1
 qmk compile -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -kb kapcave/gskt00 -km nug # gskt *1
@@ -24,6 +25,7 @@ qmk compile -kb noxary/268_2 -km nug # 268.2 red/x65 *2
 qmk compile -kb noxary/268_2_rgb -km nug # 268.2 white pcb (purple case) *1
 qmk compile -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -kb ai03/vega -km nug # vega *1
+qmk compile -kb cannonkeys/cloudline -km nug # cloudline *1
 qmk compile -kb converter/usb_usb -km nug_snow # f1-8k *1
 qmk compile -kb hineybush/h87a -km nug # frog/salamander/tkl_one *3
 qmk compile -kb hineybush/h87a -km nug_lz_xe # lz XE *1
