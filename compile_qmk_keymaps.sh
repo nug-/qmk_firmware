@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 32 lines, 40 total keyboards
+# 33 lines, 41 total keyboards
 qmk compile -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -kb noxary/220 -km nug # 220 *1
 qmk compile -kb xelus/valor/rev2 -km nug # nunu *1
@@ -30,6 +30,7 @@ qmk compile -kb converter/usb_usb -km nug_snow # f1-8k *1
 qmk compile -kb hineybush/h87a -km nug # frog/salamander/tkl_one *3
 qmk compile -kb hineybush/h87a -km nug_lz_xe # lz XE *1
 qmk compile -kb hineybush/h88 -km nug # jance/kfe ce *2
+qmk compile -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -kb matrix/m20add -km nug # 2.0 additional *1
 qmk compile -kb matrix/me -km nug # matrix me *1
 qmk compile -kb noxary/280 -km nug # 280 *2
