@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 34 lines, 42 total keyboards
+# 35 lines, 43 total keyboards
 qmk compile -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -kb noxary/220 -km nug # 220 *1
 qmk compile -kb xelus/valor/rev2 -km nug # nunu *1
@@ -35,6 +35,7 @@ qmk compile -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -kb matrix/m20add -km nug # 2.0 additional *1
 qmk compile -kb matrix/me -km nug # matrix me *1
 qmk compile -kb noxary/280 -km nug # 280 *2
+qmk compile -kb xelus/kangaroo/rev1 -km nug # roo *1
 
 #######################################
 # Missing/Not on QMK/this repo, 3 total
