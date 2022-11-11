@@ -17,8 +17,7 @@ qmk compile -kb mechlovin/jay60 -km nug # unikorn flex cut *1
 qmk compile -kb noxary/260 -km nug # x60r *1
 qmk compile -kb ai03/polaris -km nug # polaris *1
 qmk compile -kb westfoxtrot/prophet -km nug # prophet *1
-qmk compile -kb wilba_tech/wt60_d -km nug # salvation *1
-qmk compile -kb wilba_tech/wt60_bx -km nug # thermal *1
+qmk compile -kb wilba_tech/wt60_c -km nug # tx60 *1
 qmk compile -kb wilba_tech/wt65_g -km nug # graphite/aurora65  *1
 qmk compile -kb wilba_tech/wt65_a -km nug # kc65 red pcb *1
 qmk compile -kb noxary/x268 -km nug # lz clsms *1
@@ -53,6 +52,7 @@ qmk compile -kb xelus/kangaroo/rev1 -km nug # roo *1
 #qmk compile -kb tgr/alice -km nug # none/austere
 #qmk compile -kb converter/usb_usb -km nug_vita # vita *1
 #qmk compile -kb wilba_tech/rama_works_m65_bx -km nug # none/m65b
+#qmk compile -kb wilba_tech/wt60_bx -km nug # thermal *1
 #qmk compile -kb wilba_tech/wt60_xt -km nug # none/jubi
 #qmk compile -kb wilba_tech/wt65_xtx -km nug # none/zenith
 #qmk compile -kb wilba_tech/wt75_a -km nug # none/xeno
