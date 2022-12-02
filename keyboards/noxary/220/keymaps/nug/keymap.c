@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H // Layout for Noxary 220
 
-#define LT_L1NL LT(_L1, KC_NLCK) /* Numlock on tap, LAYER ONE on hold */
+#define LT_L1NL LT(_L1, KC_NUM) /* Numlock on tap, LAYER ONE on hold */
 
 enum layers {
   _L0 = 0,
