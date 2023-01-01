@@ -12,6 +12,23 @@ git fetch upstream
 git merge upstream/master
 ```
 
+## Update submodules
+```
+git submodule deinit -f --all
+rmdir lib/*
+git clean -xfd
+git submodule foreach --recursive git clean -xfd
+git reset --hard
+git submodule foreach --recursive git reset --hard
+git submodule init
+git submodule update --recursive --remote
+git commit -am "Update submodules"
+git push
+make git-submodule
+make clean
+```
+Note: `make git-submodule` will sync the current submodule version of the fork so it needs to be updated and then pushed to the forked repo before running
+
 ## To copy keymaps from previous versions
 ```
 cd old_qmk_firmware_dir
