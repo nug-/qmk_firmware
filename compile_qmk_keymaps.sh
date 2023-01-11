@@ -26,7 +26,7 @@ qmk compile -kb noxary/268_2_rgb -km nug # 268.2 white pcb (purple case) *1
 qmk compile -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -kb ai03/vega -km nug # vega *1
 qmk compile -kb cannonkeys/cloudline -km nug # cloudline *1
-qmk compile -kb converter/usb_usb -km nug_snow # f1-8k *1
+qmk compile -kb zykrah/fuyu -km nug # f1-8k *1
 qmk compile -kb hineybush/h87a -km nug # frog/salamander/tkl_one *3
 qmk compile -kb hineybush/h87a -km nug_lz_xe # lz XE *1
 qmk compile -kb hineybush/h88 -km nug # jance/kfe ce *2
@@ -59,5 +59,6 @@ qmk compile -kb xelus/kangaroo/rev1 -km nug # roo *1
 #qmk compile -kb wilba_tech/wt75_c -km nug # none/7v
 #qmk compile -kb wilba_tech/zeal60 -km nug # none
 #qmk compile -kb xelus/dawn60 -km nug # none
+#qmk compile -kb converter/usb_usb -km nug_snow # f1-8k *1
 
 # Matrix IM+ *1 (uses vial-qmk repo)
