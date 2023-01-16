@@ -83,12 +83,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCTL,  KC_NO,   KC_LALT,                   KC_SPC,                                      KC_RALT, KC_RALT, KC_RGUI, KC_RCTL,          KC_LEFT, KC_DOWN, KC_RGHT),
 
   [_L3] = LAYOUT(
-    QK_BOOT,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS,
-    _______, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS),
+    QK_BOOT,           KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,            KC_NO,   KC_NO,   KC_NO,
+    KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+    KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,            KC_NO,   KC_NO,   KC_NO,
+    _______,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                     KC_NO,   KC_NO,   KC_NO,
+    KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,            KC_NO,   KC_NO,   KC_NO,
+    KC_NO,    KC_NO,   KC_NO,                     KC_NO,                                       KC_NO,   KC_NO,   KC_NO,   KC_NO,            KC_NO,   KC_NO,   KC_NO),
 };
 
 int cur_dance (qk_tap_dance_state_t *state) {
@@ -209,33 +209,25 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         }
         #endif
     }
+
+    for (uint8_t i = led_min; i < led_max; i++) {
+        switch(get_highest_layer(layer_state|default_layer_state)) {
+            case _L1:
+                rgb_matrix_set_color(2, 255/4, 255/4, 255/4);
+                break;
+            case _L2:
+                rgb_matrix_set_color(5, 0, 191/4, 255/4);
+                break;
+            case _L3:
+                rgb_matrix_set_color(1, 255/4, 0, 0); /*red, top right column led*/
+                rgb_matrix_set_color(3, 255/4, 0, 0); /*red, top left column led*/
+                rgb_matrix_set_color(4, 255/4, 0, 0); /*red, bottom left column led*/
+                rgb_matrix_set_color(6, 255/4, 0, 0); /*red, bottom right column led*/
+                break;
+            default:
+                break;
+        }
+    }
     return false;
 }
-
 #endif
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-  switch (get_highest_layer(state)) {
-    case _L1:
-      rgb_matrix_set_color(0, 255, 255, 255); /*white, top middle column led*/
-      break;
-    case _L2:
-      rgb_matrix_set_color(5, 200, 162, 200); /*lilac, bottom middle column led*/
-      break;
-    case _L3:
-      rgb_matrix_set_color(1, 255, 0, 0); /*red, top right column led*/
-      rgb_matrix_set_color(3, 255, 0, 0); /*red, top left column led*/
-      rgb_matrix_set_color(4, 255, 0, 0); /*red, bottom left column led*/
-      rgb_matrix_set_color(6, 255, 0, 0); /*red, bottom right column led*/
-      break;
-    default:
-      rgb_matrix_set_color(0, 0, 0, 0); 
-      rgb_matrix_set_color(5, 0, 0, 0);
-      rgb_matrix_set_color(1, 0, 0, 0);
-      rgb_matrix_set_color(3, 0, 0, 0);
-      rgb_matrix_set_color(4, 0, 0, 0);
-      rgb_matrix_set_color(6, 0, 0, 0);
-      break;
-  }
-  return state;
-}
