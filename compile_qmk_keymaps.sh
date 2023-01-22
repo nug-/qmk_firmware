@@ -17,7 +17,7 @@ qmk compile -c -j 0 -kb mechlovin/jay60 -km nug # unikorn flex cut *1
 qmk compile -c -j 0 -kb noxary/260 -km nug # x60r *1
 qmk compile -c -j 0 -kb ai03/polaris -km nug # polaris *1
 qmk compile -c -j 0 -kb westfoxtrot/prophet -km nug # prophet *1
-qmk compile -c -j 0 -kb xelus/rs60/rev2_0 -km nug # rs60 *1
+qmk compile -c -j 0 -kb xelus/rs60/rev2_1 -km nug # rs60 *1
 qmk compile -c -j 0 -kb wilba_tech/wt60_c -km nug # tx60 *1
 qmk compile -c -j 0 -kb wilba_tech/wt65_g -km nug # graphite/aurora65  *1
 qmk compile -c -j 0 -kb wilba_tech/wt65_a -km nug # kc65 red pcb *1
