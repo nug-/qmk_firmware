@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 35 lines, 43 total keyboards
+# 36 lines, 44 total keyboards
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
 qmk compile -c -j 0 -kb xelus/valor/rev2 -km nug # nunu *1
@@ -24,6 +24,7 @@ qmk compile -c -j 0 -kb wilba_tech/wt65_a -km nug # kc65 red pcb *1
 qmk compile -c -j 0 -kb noxary/x268 -km nug # lz clsms *1
 qmk compile -c -j 0 -kb noxary/268_2 -km nug # 268.2 red/x65 *2
 qmk compile -c -j 0 -kb noxary/268_2_rgb -km nug # 268.2 white pcb (purple case) *1
+qmk compile -c -j 0 -kb daji/seis_cinco -km nug # seis cinco *1
 qmk compile -c -j 0 -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -c -j 0 -kb ai03/vega -km nug # vega *1
 qmk compile -c -j 0 -kb cannonkeys/cloudline -km nug # cloudline *1
