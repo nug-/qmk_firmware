@@ -160,14 +160,15 @@ void matrix_init_user(void) {
 
 }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-        if (record->event.pressed) {
-                writePinLow(E6);
-        } else {
-                writePinHigh(E6);
-        }
-        return true;
-}
+// blink scroll led on keypress
+//bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//        if (record->event.pressed) {
+//                writePinLow(E6);
+//        } else {
+//                writePinHigh(E6);
+//        }
+//        return true;
+//}
 
 void keyboard_pre_init_user(void) {
   setPinOutput(D5); // caps

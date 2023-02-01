@@ -156,19 +156,20 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TCAP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset)
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (record->event.pressed) {
-    writePinHigh(F0);
-  } else {
-    writePinLow(F0);
-  }
-  return true;
-}
-
-//void keyboard_pre_init_user(void) {
-//  setPinOutput(B9); // caps
-//  setPinOutput(F0); // scroll
+// scroll lock indicator blink on keypress
+//bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//  if (record->event.pressed) {
+//    writePinLow(F0);
+//  } else {
+//    writePinHigh(F0);
+//  }
+//  return true;
 //}
+
+void keyboard_pre_init_user(void) {
+  setPinOutput(B9); // caps
+  setPinOutput(F0); // scroll
+}
 
 layer_state_t layer_state_set_user(layer_state_t state) {
   switch (get_highest_layer(state)) {
@@ -178,11 +179,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       backlight_enable();
       break;
     case _L3:
-      writePinHigh(B9);
+      writePinLow(B9);
       break;
     default:
       backlight_disable();
-      writePinLow(B9);
+      writePinHigh(B9);
       break;
     }
     return state;

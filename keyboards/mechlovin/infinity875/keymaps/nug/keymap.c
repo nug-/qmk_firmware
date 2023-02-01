@@ -156,14 +156,15 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TCAP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset)
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (record->event.pressed) {
-    writePinHigh(B4);
-  } else {
-    writePinLow(B4);
-  }
-  return true;
-}
+// blink scroll led on keypress
+//bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//  if (record->event.pressed) {
+//    writePinHigh(B4);
+//  } else {
+//    writePinLow(B4);
+//  }
+//  return true;
+//}
 
 //void keyboard_pre_init_user(void) {
 //  setPinOutput(D6); // caps
@@ -175,12 +176,14 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case _L1:
       break;
     case _L2:
+      rgb_matrix_set_color(0, 255/4, 255/4, 255/4);
       break;
     case _L3:
       writePinHigh(D6);
       break;
     default:
       writePinLow(D6);
+      rgb_matrix_set_color(0, 0, 0, 0);
       break;
     }
     return state;

@@ -156,14 +156,15 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TCAP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset)
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (record->event.pressed) {
-    writePinHigh(D0);
-  } else {
-    writePinLow(D0);
-  }
-  return true;
-}
+// blink scroll LED on key press
+//bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//  if (record->event.pressed) {
+//    writePinHigh(D0);
+//  } else {
+//    writePinLow(D0);
+//  }
+//  return true;
+//}
 
 void keyboard_pre_init_user(void) {
   setPinOutput(D5); // caps
