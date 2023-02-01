@@ -1,6 +1,7 @@
 BOOTMAGIC_ENABLE = yes
 VIA_ENABLE = yes
-CONSOLE_ENABLE = no        # Console for debug
-COMMAND_ENABLE = no        # Commands for debug and configuration
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
 LTO_ENABLE = yes
-EXTRAKEY_ENABLE = yes       # Audio control and System control
+EXTRAKEY_ENABLE = yes
+SLEEP_LED_ENABLE = no
