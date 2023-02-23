@@ -13,7 +13,7 @@ qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
 qmk compile -c -j 0 -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -c -j 0 -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -c -j 0 -kb idb/idb_60 -km nug # idb60 *1
-qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird *4 [unikorn (spares)]
+qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60 *5 [unikorn (spares)]
 qmk compile -c -j 0 -kb mechlovin/jay60 -km nug # unikorn flex cut *1
 qmk compile -c -j 0 -kb noxary/260 -km nug # x60r *1
 qmk compile -c -j 0 -kb ai03/polaris -km nug # polaris *1
