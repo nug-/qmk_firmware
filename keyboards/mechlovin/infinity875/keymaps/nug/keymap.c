@@ -166,12 +166,18 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 //  return true;
 //}
 
+void keyboard_pre_init_user(void) {
+  setPinOutput(D6); // caps
+}
+
 bool rgb_matrix_indicators_user(void) {
-    if (host_keyboard_led_state().caps_lock) {
-        rgb_matrix_set_color(15, 255, 255, 255);
-    } else {
-        rgb_matrix_set_color(15, 0, 0, 0);
-    }
+//    if (host_keyboard_led_state().caps_lock) {
+//        //rgb_matrix_set_color(15, 255, 255, 255);
+//    		writePinHigh(D6);
+//    } else {
+//        //rgb_matrix_set_color(15, 0, 0, 0);
+//    		writePinLow(D6);
+//    }
 
     if (host_keyboard_led_state().scroll_lock) {
         rgb_matrix_set_color(16, 255, 255, 255);
@@ -184,19 +190,35 @@ bool rgb_matrix_indicators_user(void) {
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     switch(get_highest_layer(layer_state|default_layer_state)) {
         case _L1:
-            rgb_matrix_set_color(0, 255, 255, 255);
-            break;
+          rgb_matrix_set_color(0, 0, 255, 255);
+          break;
         case _L2:
-            rgb_matrix_set_color(0, 0, 0, 128);
-            break;
+          rgb_matrix_set_color(0, 255, 255, 255);
+          break;
         case _L3:
           rgb_matrix_set_color(0, 255, 0, 0);
           break;
         default:
           rgb_matrix_set_color(0, 0, 0, 0);
-            break;
+          break;
     }
     return false;
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+  switch (get_highest_layer(state)) {
+    case _L1:
+      break;
+    case _L2:
+      break;
+    case _L3:
+      writePinHigh(D6);
+      break;
+    default:
+      writePinLow(D6);
+      break;
+  }
+  return state;
 }
 
 void keyboard_post_init_user(void) {
