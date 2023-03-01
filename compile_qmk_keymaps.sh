@@ -40,9 +40,9 @@ qmk compile -c -j 0 -kb noxary/280 -km nug # 280 *2
 qmk compile -c -j 0 -kb xelus/kangaroo/rev1 -km nug # roo *1
 
 #######################################
-# Missing/Not on QMK/this repo, 3 total
+# Missing/Not on QMK/this repo, 2 total
 #######################################
-# Matrix Pad *2
+# Matrix Pad *1
 # TX65 *1 (use qmk_firmware-leeku repo)
 
 #######################################

@@ -32,11 +32,11 @@ enum {
   TCAP = 0,
 };
 
-int cur_dance (qk_tap_dance_state_t *state);
+int cur_dance (tap_dance_state_t *state);
 
 //for the x tap dance. Put it here so it can be used in any keymap
-void x_finished (qk_tap_dance_state_t *state, void *user_data);
-void x_reset (qk_tap_dance_state_t *state, void *user_data);
+void x_finished (tap_dance_state_t *state, void *user_data);
+void x_reset (tap_dance_state_t *state, void *user_data);
 
 /* 
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,    KC_NO,   KC_NO,                                       KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO) 
 };
 
-int cur_dance (qk_tap_dance_state_t *state) {
+int cur_dance (tap_dance_state_t *state) {
   if (state->count == 1) {
     if (state->interrupted || !state->pressed) return SINGLE_TAP;
     else return SINGLE_HOLD;
@@ -103,7 +103,7 @@ static tap xtap_state = {
   .state = 0
 };
 
-void x_finished (qk_tap_dance_state_t *state, void *user_data) {
+void x_finished (tap_dance_state_t *state, void *user_data) {
   xtap_state.state = cur_dance(state);
   switch (xtap_state.state) {
     case SINGLE_TAP: 
@@ -124,7 +124,7 @@ void x_finished (qk_tap_dance_state_t *state, void *user_data) {
   }
 }
 
-void x_reset (qk_tap_dance_state_t *state, void *user_data) {
+void x_reset (tap_dance_state_t *state, void *user_data) {
   switch (xtap_state.state) {
     case SINGLE_TAP:
       layer_off(_L1); 
@@ -143,7 +143,7 @@ void x_reset (qk_tap_dance_state_t *state, void *user_data) {
   xtap_state.state = 0;
 }
 
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
   [TCAP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset)
 };
 

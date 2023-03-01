@@ -17,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_P0,   KC_P0,   KC_PDOT, KC_PENT),
 
   [_L1] = LAYOUT_ortho_6x4(
-    QK_BOOT, BL_TOGG, BL_DEC,  BL_INC, 
+    QK_BOOT, BL_TOGG, BL_DOWN,  BL_UP, 
     _______, KC_NO,   KC_NO,   KC_NO, 
     KC_NO,   KC_NO,   KC_NO,   KC_NO, 
     KC_NO,   KC_NO,   KC_NO,   KC_NO, 
