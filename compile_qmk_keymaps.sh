@@ -21,7 +21,8 @@ qmk compile -c -j 0 -kb ai03/polaris -km nug # polaris *1
 qmk compile -c -j 0 -kb westfoxtrot/prophet -km nug # prophet *1
 qmk compile -c -j 0 -kb xelus/rs60/rev2_1 -km nug # rs60 *1
 qmk compile -c -j 0 -kb wilba_tech/wt60_c -km nug # tx60 *1
-qmk compile -c -j 0 -kb wilba_tech/wt65_g -km nug # graphite/aurora65  *1
+qmk compile -c -j 0 -kb wilba_tech/wt65_g -km nug # graphite/aurora65 *1
+qmk compile -c -j 0 -kb kopibeng/mnk65_stm32 -km nug # hiro *1
 qmk compile -c -j 0 -kb wilba_tech/wt65_a -km nug # kc65 red pcb *1
 qmk compile -c -j 0 -kb noxary/x268 -km nug # lz clsms *1
 qmk compile -c -j 0 -kb noxary/268_2 -km nug # 268.2 red/x65 *2
