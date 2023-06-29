@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 37 lines, 45 total keyboards
+# 37 lines, 46 total keyboards
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
 qmk compile -c -j 0 -kb linworks/dolice -km nug # dolice *1
@@ -34,7 +34,7 @@ qmk compile -c -j 0 -kb cannonkeys/cloudline -km nug # cloudline *1
 qmk compile -c -j 0 -kb zykrah/fuyu -km nug # f1-8k *1
 qmk compile -c -j 0 -kb hineybush/h87a -km nug # frog/salamander/tkl_one *3
 qmk compile -c -j 0 -kb hineybush/h87a -km nug_lz_xe # lz XE *1
-qmk compile -c -j 0 -kb hineybush/h88 -km nug # jance/kfe ce *2
+qmk compile -c -j 0 -kb hineybush/h88 -km nug # jance/kfe/cw80 ce *3
 qmk compile -c -j 0 -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -c -j 0 -kb matrix/m20add -km nug # 2.0 additional *1
 qmk compile -c -j 0 -kb matrix/me -km nug # matrix me *1
