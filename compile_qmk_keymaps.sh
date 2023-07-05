@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 38 lines, 46 total keyboards
+# 40 lines, 50 total keyboards
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
 qmk compile -c -j 0 -kb linworks/dolice -km nug # dolice *1
