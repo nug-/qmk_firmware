@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 37 lines, 46 total keyboards
+# 38 lines, 46 total keyboards
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
 qmk compile -c -j 0 -kb linworks/dolice -km nug # dolice *1
@@ -10,10 +10,11 @@ qmk compile -c -j 0 -kb projectkb/alice/rev2 -km nug # tengu *1
 qmk compile -c -j 0 -kb hineybush/h60_wideboi -km nug # rei *1
 qmk compile -c -j 0 -kb cannonkeys/moment -km nug # Moment *1
 qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
+qmk compile -c -j 0 -kb fsst60 -km nug # cw60 *1
 qmk compile -c -j 0 -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -c -j 0 -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -c -j 0 -kb idb/idb_60 -km nug # idb60 *1
-qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60/cw60 *6 [unikorn (spares)]
+qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60 *5 [unikorn (spares)]
 qmk compile -c -j 0 -kb mechlovin/jay60 -km nug # unikorn flex cut *1
 qmk compile -c -j 0 -kb mechlovin/zed60 -km nug # derivative
 qmk compile -c -j 0 -kb noxary/260 -km nug # x60r *1
