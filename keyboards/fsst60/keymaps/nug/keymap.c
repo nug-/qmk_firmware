@@ -149,6 +149,7 @@ tap_dance_action_t tap_dance_actions[] = {
 
 void keyboard_pre_init_user(void) {
   setPinOutput(GP17); // caps
+  setPinOutput(GP26); // esc
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -156,14 +157,14 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case _L1:
       break;
     case _L2:
-      writePinLow(GP26);
+      writePinHigh(GP26);
       break;
     case _L3:
-      writePinLow(GP17);
+      writePinHigh(GP17);
       break;
     default:
-      writePinHigh(GP26);
-      writePinHigh(GP17);
+      writePinLow(GP26);
+      writePinLow(GP17);
       break;
   }
   return state;
