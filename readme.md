@@ -6,6 +6,8 @@ git clone https://github.com/nug-/qmk_firmware.git
 cd qmk_firmware
 git submodule init
 git submodule update
+python3 -m pip install --user qmk
+qmk setup
 make git-submodule
 git remote add upstream https://github.com/qmk/qmk_firmware.git
 git fetch upstream
