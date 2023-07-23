@@ -2,6 +2,10 @@
 
 #define LT_L1SP LT(_L1, KC_SPC) /* SPACE on tap, LAYER ONE on hold */
 #define LT_L1DE LT(_L1, KC_DEL) /* DEL on tap, LAYER ONE on hold */
+#define RCTL_RA RCTL_T(KC_RGHT) /* Right arrow on tap, CTRL on hold */
+#define RSFT_UA RSFT_T(KC_UP)   /* Up arrow on tap, SHIFT on hold */
+#define RALT_LA RALT_T(KC_LEFT) /* Left arrow on tap, ALT on hold */
+#define RGUI_DA RGUI_T(KC_DOWN) /* Down arrow on tap, GUI on hold */
 
 enum layers {
   _L0 = 0,
@@ -50,7 +54,6 @@ void x_reset (tap_dance_state_t *state, void *user_data);
  */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
   [_L0] = LAYOUT_all(
     QK_GESC,  KC_1,     KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     KC_MINS,  KC_EQL,  KC_BSPC, KC_BSPC, KC_HOME,
     KC_TAB,   KC_Q,     KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,     KC_LBRC,  KC_RBRC, KC_BSLS,          KC_PGUP,
@@ -145,3 +148,14 @@ tap_dance_action_t tap_dance_actions[] = {
   [TCAP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset),
   [TALT] = ACTION_TAP_DANCE_DOUBLE(KC_RCTL, KC_RALT),
 };
+
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT_L1DE:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed.
+            return false;
+    }
+}
