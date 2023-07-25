@@ -6,29 +6,28 @@ qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
 qmk compile -c -j 0 -kb linworks/dolice -km nug # dolice *1
 qmk compile -c -j 0 -kb xelus/valor/rev2 -km nug # nunu *1
 qmk compile -c -j 0 -kb xelus/valor/rev1 -km nug # praxis *1
-qmk compile -c -j 0 -kb projectkb/alice/rev2 -km nug # tengu *1
+qmk compile -c -j 0 -kb projectkb/alice/rev2 -km nug # tengu/nunu *2
 qmk compile -c -j 0 -kb hineybush/h60_wideboi -km nug # rei *1
-qmk compile -c -j 0 -kb cannonkeys/moment -km nug # Moment *1
-qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
 qmk compile -c -j 0 -kb fsst60 -km nug # cw60 *1
+qmk compile -c -j 0 -kb mechlovin/zed60 -km nug # derivative *1
 qmk compile -c -j 0 -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -c -j 0 -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -c -j 0 -kb idb/idb_60 -km nug # idb60 *1
-qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60 *5 [unikorn (spares)]
-qmk compile -c -j 0 -kb studiokestra/nue -km nug # ouro *1
-qmk compile -c -j 0 -kb mechlovin/jay60 -km nug # unikorn flex cut *1
-qmk compile -c -j 0 -kb mechlovin/zed60 -km nug # derivative
+qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60/b60 *6 [unikorn (spares)]
+qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
+qmk compile -c -j 0 -kb cannonkeys/moment -km nug # Moment *1
 qmk compile -c -j 0 -kb noxary/260 -km nug # x60r *1
 qmk compile -c -j 0 -kb ai03/polaris -km nug # polaris *1
 qmk compile -c -j 0 -kb westfoxtrot/prophet -km nug # prophet *1
 qmk compile -c -j 0 -kb xelus/rs60/rev2_1 -km nug # rs60 *1
 qmk compile -c -j 0 -kb wilba_tech/wt60_c -km nug # tx60 *1
+qmk compile -c -j 0 -kb mechlovin/jay60 -km nug # unikorn flex cut *1
 qmk compile -c -j 0 -kb wilba_tech/wt65_g -km nug # graphite/aurora65 *1
 qmk compile -c -j 0 -kb kopibeng/mnk65_stm32 -km nug # hiro *1
 qmk compile -c -j 0 -kb wilba_tech/wt65_a -km nug # kc65 red pcb *1
 qmk compile -c -j 0 -kb noxary/x268 -km nug # lz clsms *1
-qmk compile -c -j 0 -kb noxary/268_2 -km nug # 268.2 red/x65 *2
-qmk compile -c -j 0 -kb noxary/268_2_rgb -km nug # 268.2 white pcb (purple case) *1
+qmk compile -c -j 0 -kb noxary/268_2 -km nug # 268.2 brass red pcb/x65 *2
+qmk compile -c -j 0 -kb noxary/268_2_rgb -km nug # 268.2 white pcb (purple poly case) *1
 qmk compile -c -j 0 -kb daji/seis_cinco -km nug # seis cinco *1
 qmk compile -c -j 0 -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -c -j 0 -kb ai03/vega -km nug # vega *1
@@ -36,12 +35,12 @@ qmk compile -c -j 0 -kb cannonkeys/cloudline -km nug # cloudline *1
 qmk compile -c -j 0 -kb zykrah/fuyu -km nug # f1-8k *1
 qmk compile -c -j 0 -kb hineybush/h87a -km nug # frog/salamander/tkl_one *3
 qmk compile -c -j 0 -kb hineybush/h87a -km nug_lz_xe # lz XE *1
-qmk compile -c -j 0 -kb hineybush/h88 -km nug # jance/kfe/cw80 ce *3
+qmk compile -c -j 0 -kb hineybush/h88 -km nug # jance/kfe/cw80 *3
 qmk compile -c -j 0 -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -c -j 0 -kb matrix/m20add -km nug # 2.0 additional *1
 qmk compile -c -j 0 -kb matrix/me -km nug # matrix me *1
 qmk compile -c -j 0 -kb noxary/280 -km nug # 280 *2
-qmk compile -c -j 0 -kb xelus/kangaroo/rev1 -km nug # roo *1
+qmk compile -c -j 0 -kb xelus/kangaroo/rev1 -km nug # kangaroo *1
 
 #######################################
 # Missing/Not on QMK/this repo, 2 total
