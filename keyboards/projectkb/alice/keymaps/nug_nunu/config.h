@@ -1,7 +1,5 @@
 #pragma once
 
-//#include "../../rev2/config.h"
-
 // place overrides here
 #undef TAPPING_TERM
 #undef TAPPING_TOGGLE

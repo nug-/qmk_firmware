@@ -1,8 +1,8 @@
 #pragma once
 
 // place overrides here
-#undef TAPPING_TOGGLE
 #undef TAPPING_TERM
+#undef TAPPING_TOGGLE
 #undef RGBLIGHT_SLEEP
 #undef USB_POLLING_INTERVAL_MS
 #undef HOLD_ON_OTHER_KEY_PRESS_PER_KEY
