@@ -151,7 +151,16 @@ tap_dance_action_t tap_dance_actions[] = {
 
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LT_L1DE:
+        case RCTL_RA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RSFT_UA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RGUI_DA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RALT_LA:
             // Immediately select the hold action when another key is pressed.
             return true;
         default:

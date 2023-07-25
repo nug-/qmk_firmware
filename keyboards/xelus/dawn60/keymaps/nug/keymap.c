@@ -150,3 +150,23 @@ void x_reset (tap_dance_state_t *state, void *user_data) {
 tap_dance_action_t tap_dance_actions[] = {
   [TCAP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset),
 };
+
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case RCTL_RA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RSFT_UA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RGUI_DA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RALT_LA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed.
+            return false;
+    }
+}

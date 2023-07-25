@@ -1,4 +1,4 @@
-#include QMK_KEYBOARD_H
+#include QMK_KEYBOARD_H // Layout for Monokei Hiro
 
 #define LT_L1SP LT(_L1, KC_SPC) /* SPACE on tap, LAYER ONE on hold */
 #define LT_L1DE LT(_L1, KC_DEL) /* DEL on tap, LAYER ONE on hold */
@@ -164,4 +164,3 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   }
   return state;
 }
-

@@ -1,4 +1,4 @@
-#include QMK_KEYBOARD_H // Layout for Noxary 280
+#include QMK_KEYBOARD_H // Layout for LZ REs
 
 #define LT_L1SP LT(_L1, KC_SPC) /* SPACE on tap, LAYER ONE on hold */
 #define LT_L1DE LT(_L1, KC_DEL) /* DELETE on tap, LAYER ONE on hold */
@@ -225,4 +225,24 @@ void keyboard_post_init_user(void) {
   rgb_matrix_enable_noeeprom(); /*enables RGB, without saving settings*/
   rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR); /*sets mode to solid without saving*/
   rgb_matrix_sethsv_noeeprom(HSV_OFF);
+}
+
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case RCTL_RA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RSFT_UA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RGUI_DA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RALT_LA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed.
+            return false;
+    }
 }

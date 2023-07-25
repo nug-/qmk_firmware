@@ -1,4 +1,4 @@
-#include QMK_KEYBOARD_H // Layout for Hineybush H87
+#include QMK_KEYBOARD_H // Layout for Fuyu (F1-8K)
 
 #define LT_L1SP LT(_L1, KC_SPC) /* SPACE on tap, LAYER ONE on hold */
 #define LT_L1DE LT(_L1, KC_DEL) /* DELETE on tap, LAYER ONE on hold */
@@ -234,3 +234,23 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     return false;
 }
 #endif
+
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case RCTL_RA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RSFT_UA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RGUI_DA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RALT_LA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed.
+            return false;
+    }
+}

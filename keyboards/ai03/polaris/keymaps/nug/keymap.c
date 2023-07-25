@@ -168,3 +168,23 @@ void keyboard_post_init_user(void) {
   rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT); /*sets mode to solid without saving*/
   rgblight_disable_noeeprom(); /*disable RGB, without saving settings*/
 }
+
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case RCTL_RA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RSFT_UA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RGUI_DA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case RALT_LA:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed.
+            return false;
+    }
+}
