@@ -52,8 +52,8 @@ void x_reset (tap_dance_state_t *state, void *user_data);
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_L0] = LAYOUT(
     KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,   KC_9,     KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_BSPC, KC_HOME,
-    KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,   KC_O,     KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,          KC_END,
-    TD(TCAP), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,   KC_L,     KC_SCLN, KC_QUOT, KC_NO,   KC_ENT,           KC_PGUP, 
+    KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,   KC_O,     KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,          KC_PGUP,
+    TD(TCAP), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,   KC_L,     KC_SCLN, KC_QUOT, KC_NO,   KC_ENT,           KC_PGDN, 
     KC_LSFT,  KC_NO,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,   KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT, KC_UP,            LT_L1DE,
     KC_LCTL,  KC_LGUI, KC_LALT,                   LT_L1SP,                           TD(TALT), TD(TALT),                  KC_LEFT, KC_DOWN, KC_RGHT),
 
@@ -66,8 +66,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_L2] = LAYOUT(
     KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,   KC_9,     KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_BSPC, KC_HOME,
-    KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,   KC_O,     KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,          KC_END,
-    _______,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,   KC_L,     KC_SCLN, KC_QUOT, KC_NO,   KC_ENT,           KC_PGUP, 
+    KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,   KC_O,     KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,          KC_PGUP,
+    _______,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,   KC_L,     KC_SCLN, KC_QUOT, KC_NO,   KC_ENT,           KC_PGDN, 
     KC_LSFT,  KC_NO,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,   KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT, KC_UP,            KC_END,
     KC_LCTL,  KC_NO,   KC_LALT,                   KC_SPC,                            TD(TALT), TD(TALT),                  KC_LEFT, KC_DOWN, KC_RGHT),
 
@@ -155,14 +155,14 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case _L1:
       break;
     case _L2:
-      writePinHigh(F7);
+      writePinLow(F7);
       break;
     case _L3:
-      writePinHigh(F6);
+      writePinLow(F6);
       break;
     default:
-      writePinLow(F6);
-      writePinLow(F7);
+      writePinHigh(F6);
+      writePinHigh(F7);
       break;
   }
   return state;
