@@ -29,6 +29,7 @@ qmk compile -c -j 0 -kb cablecardesigns/ccd65/atmel -km nug # angel *1
 qmk compile -c -j 0 -kb wilba_tech/wt65_g -km nug # graphite/aurora65 *1
 qmk compile -c -j 0 -kb kopibeng/mnk65_stm32 -km nug # hiro *1
 qmk compile -c -j 0 -kb wilba_tech/wt65_a -km nug # kc65 red pcb *1
+qmk compile -c -j 0 -kb wolf/kohakusolderrgb -km nug # kohaku poly pcb *1
 qmk compile -c -j 0 -kb noxary/x268 -km nug # lz clsms *1
 qmk compile -c -j 0 -kb noxary/268_2 -km nug # 268.2 brass red pcb/x65 *2
 qmk compile -c -j 0 -kb noxary/268_2_rgb -km nug # 268.2 white pcb (purple poly case) *1
