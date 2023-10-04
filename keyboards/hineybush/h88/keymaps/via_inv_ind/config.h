@@ -1,0 +1,2 @@
+#undef LED_PIN_ON_STATE
+#define LED_PIN_ON_STATE 0
