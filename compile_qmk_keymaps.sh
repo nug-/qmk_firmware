@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 40 lines, 50 total keyboards
+# 41 lines, 51 total keyboards
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
 ### alice boards
@@ -16,6 +16,7 @@ qmk compile -c -j 0 -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -c -j 0 -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -c -j 0 -kb idb/idb_60 -km nug # idb60 *1
 qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60/b60 *6 [unikorn (spares)]
+qmk compile -c -j 0 -kb jels/jels60/v1 -km nug # khajit *1
 qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
 qmk compile -c -j 0 -kb cannonkeys/moment -km nug # Moment *1
 qmk compile -c -j 0 -kb noxary/260 -km nug # x60r *1
