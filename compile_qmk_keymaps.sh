@@ -16,6 +16,7 @@ qmk compile -c -j 0 -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -c -j 0 -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -c -j 0 -kb idb/idb_60 -km nug # idb60 *1
 qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60/b60 *6 [unikorn (spares)]
+qmk compile -c -j 0 -kb hineybush/h60 -km nug_al6 # al6 *1
 qmk compile -c -j 0 -kb jels/jels60/v1 -km nug # khajit *1
 qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
 qmk compile -c -j 0 -kb cannonkeys/moment -km nug # Moment *1
