@@ -40,8 +40,9 @@ qmk compile -c -j 0 -kb ai03/vega -km nug # vega *1
 ### TKL boards
 qmk compile -c -j 0 -kb cannonkeys/cloudline -km nug # cloudline *1
 qmk compile -c -j 0 -kb zykrah/fuyu -km nug # f1-8k *1
-qmk compile -c -j 0 -kb hineybush/h87a -km nug # frog/salamander/tkl_one *3
+qmk compile -c -j 0 -kb hineybush/h87a -km nug # frog/salamander *2
 qmk compile -c -j 0 -kb hineybush/h87a -km nug_lz_xe # lz XE *1
+qmk compile -c -j 0 -kb hineybush/h87c_tkl_one -km nug # tkl one *2
 qmk compile -c -j 0 -kb hineybush/h88 -km nug # jance/kfe/cw80 *3
 qmk compile -c -j 0 -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -c -j 0 -kb matrix/m20add -km nug # 2.0 additional *1
