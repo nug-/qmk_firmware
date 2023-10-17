@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# 41 lines, 51 total keyboards
+# 45 lines, 58 total keyboards
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
 ### alice boards
 qmk compile -c -j 0 -kb linworks/dolice -km nug # dolice *1
-qmk compile -c -j 0 -kb xelus/valor/rev2 -km nug # nunu *1
+qmk compile -c -j 0 -kb xelus/valor/rev2 -km nug # nunu poly *1
 qmk compile -c -j 0 -kb xelus/valor/rev1 -km nug # praxis *1
 qmk compile -c -j 0 -kb projectkb/alice/rev2 -km nug # tengu/nunu *2
 ### 60% boards
@@ -16,7 +16,7 @@ qmk compile -c -j 0 -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -c -j 0 -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -c -j 0 -kb idb/idb_60 -km nug # idb60 *1
 qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60/b60 *6 [unikorn (spares)]
-qmk compile -c -j 0 -kb hineybush/h60 -km nug_al6 # al6 *1
+qmk compile -c -j 0 -kb hineybush/h60_al6 -km nug # al6 *1
 qmk compile -c -j 0 -kb jels/jels60/v1 -km nug # khajit *1
 qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
 qmk compile -c -j 0 -kb cannonkeys/moment -km nug # Moment *1
@@ -28,7 +28,7 @@ qmk compile -c -j 0 -kb wilba_tech/wt60_c -km nug # tx60 *1
 qmk compile -c -j 0 -kb mechlovin/jay60 -km nug # unikorn flex cut *1
 ### 65% boards
 qmk compile -c -j 0 -kb cablecardesigns/ccd65/atmel -km nug # angel *1
-qmk compile -c -j 0 -kb wilba_tech/wt65_g -km nug # graphite/aurora65 *1
+qmk compile -c -j 0 -kb wilba_tech/wt65_g -km nug # aurora65 *1
 qmk compile -c -j 0 -kb kopibeng/mnk65_stm32 -km nug # hiro *1
 qmk compile -c -j 0 -kb wilba_tech/wt65_a -km nug # kc65 red pcb *1
 qmk compile -c -j 0 -kb wolf/kohakusolderrgb -km nug # kohaku poly pcb *1
@@ -49,9 +49,13 @@ qmk compile -c -j 0 -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -c -j 0 -kb matrix/m20add -km nug # 2.0 additional *1
 qmk compile -c -j 0 -kb matrix/me -km nug # matrix me *1
 qmk compile -c -j 0 -kb noxary/280 -km nug # 280 *2
-qmk compile -c -j 0 -kb tgr/jane/v2ce -km nug # tgr jane v2 ce spare og pcb *1
 ### FS boards
 qmk compile -c -j 0 -kb xelus/kangaroo/rev1 -km nug # kangaroo *1
+
+#######################################
+# Not used
+#######################################
+#qmk compile -c -j 0 -kb tgr/jane/v2ce -km nug # tgr jane v2 ce spare og pcb *1
 
 #######################################
 # Missing/Not on QMK/this repo, 2 total
