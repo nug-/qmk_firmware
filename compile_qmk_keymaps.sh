@@ -49,6 +49,7 @@ qmk compile -c -j 0 -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -c -j 0 -kb matrix/m20add -km nug # 2.0 additional *1
 qmk compile -c -j 0 -kb matrix/me -km nug # matrix me *1
 qmk compile -c -j 0 -kb noxary/280 -km nug # 280 *2
+qmk compile -c -j 0 -kb tgr/jane/v2ce -km nug # tgr jane v2 ce spare og pcb *1
 ### FS boards
 qmk compile -c -j 0 -kb xelus/kangaroo/rev1 -km nug # kangaroo *1
 
