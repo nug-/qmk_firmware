@@ -1,0 +1,10 @@
+VIA_ENABLE = yes
+VIAL_ENABLE = yes
+LTO_ENABLE = yes
+BOOTMAGIC_ENABLE = yes
+TAP_DANCE_ENABLE = yes
+EXTRAKEY_ENABLE = no
+MOUSEKEY_ENABLE = no
+CONSOLE_ENABLE = no        # Console for debug
+COMMAND_ENABLE = no        # Commands for debug and configuration
+RGBLIGHT_ENABLE = no
