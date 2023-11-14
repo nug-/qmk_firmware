@@ -14,7 +14,8 @@
     },
     "diode_direction": "COL2ROW",
     "backlight": {
-        "pin": "B7"
+        "pin": "B7",
+        "on_state":0
     },
     "ws2812": {
         "pin": "D3"

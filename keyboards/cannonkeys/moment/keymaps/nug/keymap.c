@@ -167,24 +167,24 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
-//void keyboard_pre_init_user(void) {
-//  setPinOutput(B0); // caps
-//}
-//
-//layer_state_t layer_state_set_user(layer_state_t state) {
-//  switch (get_highest_layer(state)) {
-//    case _L1:
-//      break;
-//    case _L2:
-//      backlight_enable();
-//      break;
-//    case _L3:
-//      writePinHigh(B0);
-//      break;
-//    default:
-//      backlight_disable();
-//      writePinLow(B0);
-//      break;
-//  }
-//  return state;
-//}
+void keyboard_pre_init_user(void) {
+  setPinOutput(A3); // caps
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+  switch (get_highest_layer(state)) {
+    case _L1:
+      break;
+    case _L2:
+      backlight_enable();
+      break;
+    case _L3:
+      writePinLow(A3);
+      break;
+    default:
+      backlight_disable();
+      writePinHigh(A3);
+      break;
+  }
+  return state;
+}
