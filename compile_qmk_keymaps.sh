@@ -1,4 +1,5 @@
 #!/bin/bash
+# find all files: "Z:\home\benjamin\qmk_firmware\keyboards\*\nug\keymap.c"
 
 # 46 lines, 60 total keyboards
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
