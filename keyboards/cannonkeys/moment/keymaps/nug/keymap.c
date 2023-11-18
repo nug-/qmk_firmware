@@ -176,13 +176,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case _L1:
       break;
     case _L2:
-      backlight_enable();
+//      backlight_enable();
       break;
     case _L3:
       writePinLow(A3);
       break;
     default:
-      backlight_disable();
+//      backlight_disable();
       writePinHigh(A3);
       break;
   }

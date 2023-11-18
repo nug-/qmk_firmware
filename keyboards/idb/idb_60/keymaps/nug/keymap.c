@@ -157,13 +157,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case _L1:
       break;
     case _L2:
-      writePinLow(C4);
+//      writePinLow(C4);
       break;
     case _L3:
       writePinLow(C5);
       break;
     default:
-      writePinHigh(C4);
+//      writePinHigh(C4);
       writePinHigh(C5);
       break;
   }

@@ -181,16 +181,16 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       rgblight_sethsv_noeeprom(0, 0, 255); /*white*/
       break;
     case _L2:
-      backlight_enable();
-      rgblight_sethsv_noeeprom(0, 150, 255); /*light pink*/
+//      backlight_enable();
+//      rgblight_sethsv_noeeprom(0, 150, 255); /*light pink*/
       break;
     case _L3:
       rgblight_sethsv_noeeprom(0, 255, 255); /*red*/
       writePinLow(D5);
       break;
     default:
+//      backlight_disable();
       rgblight_sethsv_noeeprom(0, 0, 0);
-      backlight_disable();
       writePinHigh(D5);
       break;
   }
