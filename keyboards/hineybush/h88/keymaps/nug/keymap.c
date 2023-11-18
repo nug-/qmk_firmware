@@ -182,7 +182,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       break;
     case _L2:
 //      backlight_enable();
-      //rgblight_sethsv_noeeprom(180, 255, 255); /*violet*/
+//      rgblight_sethsv_noeeprom(180, 255, 255); /*violet*/
       break;
     case _L3:
       rgblight_sethsv_noeeprom(0, 255, 255); /*red*/
