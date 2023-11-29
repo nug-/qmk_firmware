@@ -62,6 +62,7 @@ qmk compile -c -j 0 -kb xelus/kangaroo/rev1 -km nug # kangaroo *1
 # Not used
 #######################################
 #qmk compile -c -j 0 -kb tgr/jane/v2ce -km nug # tgr jane v2 ce spare og pcb *1
+#qmk compile -c -j 0 -kb duck/orion/v3 -km nug # duck orion v2.5 spare og pcb *1
 
 #######################################
 # Missing/Not on QMK/this repo, 2 total
