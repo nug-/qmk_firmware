@@ -2,10 +2,6 @@
 
 #define LT_L1SP LT(_L1, KC_SPC) /* SPACE on tap, LAYER ONE on hold */
 #define LT_L1DE LT(_L1, KC_DEL) /* DELETE on tap, LAYER ONE on hold */
-#define RCTL_RA RCTL_T(KC_RGHT) /* Right arrow on tap, CTRL on hold */
-#define RSFT_UA RSFT_T(KC_UP)   /* Up arrow on tap, SHIFT on hold */
-#define RALT_LA RALT_T(KC_LEFT) /* Left arrow on tap, ALT on hold */
-#define RGUI_DA RGUI_T(KC_DOWN) /* Down arrow on tap, GUI on hold */
 #define MACRO0 LCTL(LALT(LSFT(KC_Z))) /* Discord deafen toggle, ctrl+alt+shift+z */
 #define MACRO1 LCTL(LALT(LSFT(KC_X))) /* Discord mute toggle, ctrl+alt+shift+x */
 
@@ -134,23 +130,3 @@ void x_reset (tap_dance_state_t *state, void *user_data) {
 tap_dance_action_t tap_dance_actions[] = {
   [TCAP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset),
 };
-
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case RCTL_RA:
-            // Immediately select the hold action when another key is pressed.
-            return true;
-        case RSFT_UA:
-            // Immediately select the hold action when another key is pressed.
-            return true;
-        case RGUI_DA:
-            // Immediately select the hold action when another key is pressed.
-            return true;
-        case RALT_LA:
-            // Immediately select the hold action when another key is pressed.
-            return true;
-        default:
-            // Do not select the hold action when another key is pressed.
-            return false;
-    }
-}
