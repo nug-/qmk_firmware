@@ -1,0 +1,22 @@
+#pragma once
+
+// place overrides here
+#undef TAPPING_TERM
+#undef TAPPING_TOGGLE
+#undef USB_POLLING_INTERVAL_MS
+#undef HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+//#undef BACKLIGHT_ON_STATE
+//#undef LED_PIN_ON_STATE
+//#undef LED_CAPS_LOCK_PIN
+//#undef LED_SCROLL_LOCK_PIN
+//#undef BACKLIGHT_PIN
+
+#define TAPPING_TOGGLE 2
+#define TAPPING_TERM 175
+#define USB_POLLING_INTERVAL_MS 1
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+//#define BACKLIGHT_ON_STATE 1
+//#define LED_PIN_ON_STATE 1
+//#define LED_CAPS_LOCK_PIN D5
+//#define LED_SCROLL_LOCK_PIN E6
+//#define BACKLIGHT_PIN B7
