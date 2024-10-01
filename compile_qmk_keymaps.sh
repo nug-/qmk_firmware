@@ -50,13 +50,14 @@ qmk compile -c -j 0 -kb daji/seis_cinco -km nug # seis cinco *1
 qmk compile -c -j 0 -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -c -j 0 -kb leeku/finger65 -km nug # TX65 *1
 qmk compile -c -j 0 -kb ai03/vega -km nug # vega *1
-### TKL boards (20)
+### TKL boards (21)
 qmk compile -c -j 0 -kb cannonkeys/cloudline -km nug # cloudline *1
 qmk compile -c -j 0 -kb hineybush/h88 -km nug # cw80/jancev2/kfe *3
 qmk compile -c -j 0 -kb mechlovin/olly/orion -km nug # duck orion v2.5 *1
 qmk compile -c -j 0 -kb zykrah/fuyu -km nug # f1-8k *1
 qmk compile -c -j 0 -kb studiokestra/galatea/rev1 -km nug # f1-8x v2 *1
 qmk compile -c -j 0 -kb hineybush/h87a -km nug # frog/salamander *2
+qmk compile -c -j 0 -kb baion878/sl -km nug # Gehirn *1
 qmk compile -c -j 0 -kb wilba_tech/wt80_a -km nug # kc TKL *1
 qmk compile -c -j 0 -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -c -j 0 -kb hineybush/h87a -km nug_lz_xe # lz XE *1
