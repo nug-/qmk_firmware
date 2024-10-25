@@ -26,6 +26,7 @@ qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl6
 qmk compile -c -j 0 -kb jels/jels60/v1 -km nug # khajit *1
 qmk compile -c -j 0 -kb buildakb/martingale -km nug # martingale *1
 qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
+qmk compile -c -j 0 -kb mechlovin/kay60 -km nug # mini 2000 se *1
 qmk compile -c -j 0 -kb cannonkeys/moment -km nug # Moment *1
 qmk compile -c -j 0 -kb noxary/260 -km nug # noxary x60r *1
 qmk compile -c -j 0 -kb ai03/polaris -km nug # polaris *1
