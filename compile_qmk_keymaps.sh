@@ -47,7 +47,7 @@ qmk compile -c -j 0 -kb wolf/kohakusolderrgb -km nug # kohaku poly pcb *1
 qmk compile -c -j 0 -kb noxary/x268 -km nug # lz clsms *1
 qmk compile -c -j 0 -kb noxary/268_2 -km nug # noxary 268.2 brass red pcb/x65 *2
 qmk compile -c -j 0 -kb noxary/268_2_rgb -km nug # noxary 268.2 white pcb (purple poly case) *1
-qmk compile -c -j 0 -kb machina/orbit65 -km nug # orbit65 *1
+qmk compile -c -j 0 -kb machina/rev2/orbit65 -km nug # orbit65 *1
 qmk compile -c -j 0 -kb daji/seis_cinco -km nug # seis cinco *1
 qmk compile -c -j 0 -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -c -j 0 -kb leeku/finger65 -km nug # TX65 *1
