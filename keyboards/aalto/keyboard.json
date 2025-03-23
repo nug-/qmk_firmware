@@ -22,6 +22,10 @@
         "rows": ["A7", "A6", "A5", "B14", "A4"],
         "cols": ["B13", "B12", "B1", "B0", "A8", "B15", "B7", "B6", "B5", "B4", "B3", "A15", "B8", "A2", "A1", "B9"]
     },
+    "indicators": {
+        "caps_lock": "A14",
+        "on_state": 1
+    },
     "url": "www.antipode.no/aalto",
     "layouts": {
         "LAYOUT_60_xt_tsangan": {

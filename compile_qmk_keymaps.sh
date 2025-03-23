@@ -17,7 +17,7 @@ qmk compile -c -j 0 -kb hineybush/h60_wideboi -km nug # rei *1
 ### 60% boards (24)
 qmk compile -c -j 0 -kb hineybush/h60_al6 -km nug # al6 *1
 qmk compile -c -j 0 -kb machina/cloudnine -km nug # cloudnine *1
-qmk compile -c -j 0 -kb fsst60 -km nug # cw60 *1
+qmk compile -c -j 0 -kb fsst60 -km nug # cw60/896 *2
 qmk compile -c -j 0 -kb mechlovin/zed60 -km nug # derivative *1
 qmk compile -c -j 0 -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -c -j 0 -kb kapcave/gskt00 -km nug # gskt *1

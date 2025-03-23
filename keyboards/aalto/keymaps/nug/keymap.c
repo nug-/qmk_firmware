@@ -134,7 +134,7 @@ tap_dance_action_t tap_dance_actions[] = {
 };
 
 void keyboard_pre_init_user(void) {
-  setPinOutput(C6); // caps
+  setPinOutput(A14); // caps
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -145,11 +145,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 //      backlight_enable();
       break;
     case _L3:
-      writePinLow(C6);
+      writePinHigh(A14);
       break;
     default:
 //      backlight_disable();
-      writePinHigh(C6);
+      writePinLow(A14);
       break;
   }
   return state;
