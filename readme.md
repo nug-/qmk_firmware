@@ -8,6 +8,20 @@
 
 This is a keyboard firmware based on the [tmk\_keyboard firmware](https://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](https://olkb.com), the [ErgoDox EZ](https://ergodox-ez.com) keyboard, and the Clueboard product line.
 
+## Installation
+
+```
+git clone git@github.com:nug-/qmk_firmware.git
+git remote set-url origin git@github.com:qmk/qmk_firmware.git
+cd qmk_firmware/util
+./qmk_install.sh
+cd ..
+git submodule init
+git submodule update
+make git-submodule
+python3 -m pip install --user qmk
+```
+
 ## Documentation
 
 * [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
