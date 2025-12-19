@@ -1,7 +1,7 @@
 #!/bin/bash
 # find all files: "Z:\home\benjamin\qmk_firmware\keyboards\*\nug*\keymap.c"
 
-# 60 lines, 74 total keyboards (missing Matrix Pad from Spreadsheet)
+# 61 lines, 75 total keyboards (missing Matrix Pad from Spreadsheet)
 ### numpads and macro mads (3) missing Matrix Pad
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
@@ -24,6 +24,7 @@ qmk compile -c -j 0 -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -c -j 0 -kb mechlovin/zed60 -km nug_hex # hex.3cv2 *1
 qmk compile -c -j 0 -kb idb/idb_60 -km nug # idb60 *1
 qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60/b60 [excludes unikorn (spares)] *6
+qmk compile -c -j 0 -kb keycult/keycult60 -km nug # keycult 1/60 *1
 qmk compile -c -j 0 -kb jels/jels60/v1 -km nug # khajit *1
 qmk compile -c -j 0 -kb buildakb/martingale -km nug # martingale *1
 qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
