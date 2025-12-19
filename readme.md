@@ -21,6 +21,12 @@ git submodule update
 make git-submodule
 python3 -m pip install --user qmk
 ```
+if `python3 -m pip install --user qmk` doesn't work in newer versions of Ubuntu, use:
+```
+sudo apt update
+sudo apt install pipx
+pipx install qmk
+```
 
 ## Documentation
 
