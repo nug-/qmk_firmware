@@ -1,7 +1,7 @@
 #!/bin/bash
 # find all files: "Z:\home\benjamin\qmk_firmware\keyboards\*\nug*\keymap.c"
 
-# 61 lines, 75 total keyboards (missing Matrix Pad from Spreadsheet)
+# 65 lines, 75 total keyboards (missing Matrix Pad from Spreadsheet)
 ### numpads and macro mads (3) missing Matrix Pad
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
@@ -15,6 +15,7 @@ qmk compile -c -j 0 -kb xelus/valor/rev1 -km nug # praxis *1
 qmk compile -c -j 0 -kb aalto -km nug # aalto *1
 qmk compile -c -j 0 -kb hineybush/h60_wideboi -km nug # rei *1
 ### 60% boards (24)
+qmk compile -c -j 0 -kb dz60 -km nug_tsangan # burner *1
 qmk compile -c -j 0 -kb hineybush/h60_al6 -km nug # al6 *1
 qmk compile -c -j 0 -kb machina/cloudnine -km nug # cloudnine *1
 qmk compile -c -j 0 -kb fsst60 -km nug # cw60/896 *2
@@ -90,7 +91,7 @@ qmk compile -c -j 0 -kb xelus/kangaroo/rev1 -km nug # kangaroo *1
 # OLD OLD OLD OLD OLD OLD OLD OLD OLD
 #######################################
 #qmk compile -c -j 0 -kb dz60 -km nug_ansi # none/tofu
-#qmk compile -c -j 0 -kb dz60 -km nug_tsangan # none/tofu
+
 #qmk compile -c -j 0 -kb hineybush/physix -km nug # none/physix
 #qmk compile -c -j 0 -kb singa -km nug # none/singa r2
 #qmk compile -c -j 0 -kb tgr/alice -km nug # none/austere
