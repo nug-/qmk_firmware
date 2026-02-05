@@ -1,8 +1,8 @@
 #!/bin/bash
 # find all files: "Z:\home\benjamin\qmk_firmware\keyboards\*\nug*\keymap.c"
 
-# 65 lines, 75 total keyboards (missing Matrix Pad from Spreadsheet)
-### numpads and macro mads (3) missing Matrix Pad
+# 65 lines, 83 total keyboards (missing Matrix Pad, Sessanta from Spreadsheet)
+### numpads and macro mads (3)+1 missing Matrix Pad
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
 ### alice boards (7)
@@ -14,22 +14,23 @@ qmk compile -c -j 0 -kb xelus/valor/rev1 -km nug # praxis *1
 ### 60% XT boards (2)
 qmk compile -c -j 0 -kb aalto -km nug # aalto *1
 qmk compile -c -j 0 -kb hineybush/h60_wideboi -km nug # rei *1
-### 60% boards (24)
+### 60% boards (32)+1 - currently missing Sessanta (2026-02-05)
 qmk compile -c -j 0 -kb dz60 -km nug_tsangan # burner *1
+qmk compile -c -j 0 -kb mechlovin/kay60 -km nug # mini 2000 se *1
+qmk compile -c -j 0 -kb fsst60 -km nug # /896/cw60 *2
 qmk compile -c -j 0 -kb hineybush/h60_al6 -km nug # al6 *1
+qmk compile -c -j 0 -kb hineybush/h60 -km nug # bowl60/kei/KMB_b60/ogre/palmetto/ladybird [excludes unikorn (spares)] *6
 qmk compile -c -j 0 -kb machina/cloudnine -km nug # cloudnine *1
-qmk compile -c -j 0 -kb fsst60 -km nug # cw60/896 *2
 qmk compile -c -j 0 -kb mechlovin/zed60 -km nug # derivative *1
 qmk compile -c -j 0 -kb geonworks/frogmini/fms -km nug # frog mini *1
 qmk compile -c -j 0 -kb kapcave/gskt00 -km nug # gskt *1
 qmk compile -c -j 0 -kb mechlovin/zed60 -km nug_hex # hex.3cv2 *1
 qmk compile -c -j 0 -kb idb/idb_60 -km nug # idb60 *1
-qmk compile -c -j 0 -kb hineybush/h60 -km nug # kei/ogre/palmetto/ladybird/bowl60/b60 [excludes unikorn (spares)] *6
 qmk compile -c -j 0 -kb keycult/keycult60 -km nug # keycult 1/60 *1
 qmk compile -c -j 0 -kb jels/jels60/v1 -km nug # khajit *1
+qmk compile -c -j 0 -kb dnworks/60percent -km nug # kypseli mini/seven *2
 qmk compile -c -j 0 -kb buildakb/martingale -km nug # martingale *1
 qmk compile -c -j 0 -kb fjlabs/midway60 -km nug # midway60 *1
-qmk compile -c -j 0 -kb mechlovin/kay60 -km nug # mini 2000 se *1
 qmk compile -c -j 0 -kb cannonkeys/moment -km nug # Moment *1
 qmk compile -c -j 0 -kb noxary/vulcan -km nug # noxary vulcan *1
 qmk compile -c -j 0 -kb noxary/260 -km nug # noxary x60r *1
@@ -39,9 +40,9 @@ qmk compile -c -j 0 -kb xelus/rs60/rev2_1 -km nug # rs60 *1
 qmk compile -c -j 0 -kb daji/seis_cero -km nug # seis cero *1
 qmk compile -c -j 0 -kb wilba_tech/wt60_c -km nug # tx60 *1
 qmk compile -c -j 0 -kb mechlovin/jay60 -km nug # unikorn flex cut *1
-### 65% boards (16)
+### 65% boards (17)
 qmk compile -c -j 0 -kb cablecardesigns/ccd65/atmel -km nug # angel *1
-qmk compile -c -j 0 -kb wilba_tech/wt65_g -km nug # aurora65 *1
+qmk compile -c -j 0 -kb wilba_tech/wt65_g -km nug # aurora65/tgr_mia *2
 qmk compile -c -j 0 -kb kopibeng/mnk65_stm32 -km nug # hiro *1
 qmk compile -c -j 0 -kb wilba_tech/wt65_a -km nug # kc65 red pcb *1
 qmk compile -c -j 0 -kb sleepdealer/b65 -km nug # KMG B65 *1
@@ -55,22 +56,21 @@ qmk compile -c -j 0 -kb daji/seis_cinco -km nug # seis cinco *1
 qmk compile -c -j 0 -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -c -j 0 -kb leeku/finger65 -km nug # TX65 *1
 qmk compile -c -j 0 -kb ai03/vega -km nug # vega *1
-### TKL boards (21)
+### TKL boards (21)+2 - currently missing KC TKL, Matrix 1.2og (2026-02-05)
 qmk compile -c -j 0 -kb cannonkeys/cloudline -km nug # cloudline *1
 qmk compile -c -j 0 -kb hineybush/h88 -km nug # cw80/jancev2/kfe *3
 qmk compile -c -j 0 -kb mechlovin/olly/orion -km nug # duck orion v2.5 *1
-qmk compile -c -j 0 -kb zykrah/fuyu -km nug # f1-8k *1
-qmk compile -c -j 0 -kb studiokestra/galatea/rev1 -km nug # f1-8x v2 *1
+qmk compile -c -j 0 -kb zykrah/fuyu -km nug # f1-8k snow *1
+qmk compile -c -j 0 -kb studiokestra/galatea/rev1 -km nug # f1-8x v2, f1-8x 722, KMG_TKL *3
 qmk compile -c -j 0 -kb hineybush/h87a -km nug # frog/salamander *2
 qmk compile -c -j 0 -kb baion878/sl -km nug # Gehirn *1
-qmk compile -c -j 0 -kb wilba_tech/wt80_a -km nug # kc TKL *1
 qmk compile -c -j 0 -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -c -j 0 -kb hineybush/h87a -km nug_lz_xe # lz XE *1
 qmk compile -c -j 0 -kb matrix/m20add -km nug # matrix 2.0 additional *1
 qmk compile -c -j 0 -kb matrix/me -km nug # matrix me *1
 qmk compile -c -j 0 -kb noxary/280 -km nug # noxary 280 *2
 qmk compile -c -j 0 -kb mechlovin/infinity875 -km nug_ori # ORI CLS *1
-qmk compile -c -j 0 -kb hineybush/h87c_tkl_one -km nug # tkl one/kmg tkl *2
+qmk compile -c -j 0 -kb hineybush/h87c_tkl_one -km nug # tkl one *1
 qmk compile -c -j 0 -kb hineybush/h87c_tkl_one -km nug_lime # tkl one (lime) *1
 ### FS boards (1)
 qmk compile -c -j 0 -kb xelus/kangaroo/rev1 -km nug # kangaroo *1
@@ -78,6 +78,7 @@ qmk compile -c -j 0 -kb xelus/kangaroo/rev1 -km nug # kangaroo *1
 #######################################
 # Not used
 #######################################
+#qmk compile -c -j 0 -kb wilba_tech/wt80_a -km nug # kc TKL *1 ???
 #qmk compile -c -j 0 -kb tgr/jane/v2ce -km nug # tgr jane v2 ce spare og pcb *1
 #qmk compile -c -j 0 -kb duck/orion/v3 -km nug # duck orion v2.5 spare og pcb *1
 
