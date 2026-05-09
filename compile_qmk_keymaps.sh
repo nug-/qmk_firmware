@@ -1,13 +1,14 @@
 #!/bin/bash
 # find all files: "Z:\home\benjamin\qmk_firmware\keyboards\*\nug*\keymap.c"
 
-# 65 lines, 83 total keyboards (missing Matrix Pad, Sessanta from Spreadsheet)
+# 66 lines, 84 total keyboards (missing Matrix Pad, Sessanta from Spreadsheet)
 ### numpads and macro mads (3)+1 missing Matrix Pad
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
 ### alice boards (7)
 qmk compile -c -j 0 -kb mechlovin/adelais/standard_led/arm/rev4/apm32f103 -km nug # dodici *1
 qmk compile -c -j 0 -kb linworks/dolice -km nug # dolice *1
+qmk compile -c -j 0 -kb sleepdealer/evalice -km nug # ninelice *1
 qmk compile -c -j 0 -kb projectkb/alice/rev2 -km nug # nunu (black)/nunu (burg)/tengu *3
 qmk compile -c -j 0 -kb xelus/valor/rev2 -km nug # nunu poly *1
 qmk compile -c -j 0 -kb xelus/valor/rev1 -km nug # praxis *1
