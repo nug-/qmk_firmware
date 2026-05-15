@@ -1,7 +1,7 @@
 #!/bin/bash
 # find all files: "Z:\home\benjamin\qmk_firmware\keyboards\*\nug*\keymap.c"
 
-# 66 lines, 84 total keyboards (missing Matrix Pad, Sessanta from Spreadsheet)
+# 67 lines, 85 total keyboards (missing Matrix Pad, Sessanta from Spreadsheet)
 ### numpads and macro mads (3)+1 missing Matrix Pad
 qmk compile -c -j 0 -kb wilba_tech/rama_works_m6_a -km nug # m6a *2
 qmk compile -c -j 0 -kb noxary/220 -km nug # 220 *1
@@ -57,7 +57,7 @@ qmk compile -c -j 0 -kb daji/seis_cinco -km nug # seis cinco *1
 qmk compile -c -j 0 -kb mechlovin/hannah65/rev1 -km nug # sessantacinque *1
 qmk compile -c -j 0 -kb leeku/finger65 -km nug # TX65 *1
 qmk compile -c -j 0 -kb ai03/vega -km nug # vega *1
-### TKL boards (21)+2 - currently missing KC TKL, Matrix 1.2og (2026-02-05)
+### TKL boards (22)+1 - currently missing KC TKL, (2026-05-15)
 qmk compile -c -j 0 -kb cannonkeys/cloudline -km nug # cloudline *1
 qmk compile -c -j 0 -kb hineybush/h88 -km nug # cw80/jancev2/kfe *3
 qmk compile -c -j 0 -kb mechlovin/olly/orion -km nug # duck orion v2.5 *1
@@ -67,6 +67,7 @@ qmk compile -c -j 0 -kb hineybush/h87a -km nug # frog/salamander *2
 qmk compile -c -j 0 -kb baion878/sl -km nug # Gehirn *1
 qmk compile -c -j 0 -kb mechlovin/infinity875 -km nug # lz REs *1
 qmk compile -c -j 0 -kb hineybush/h87a -km nug_lz_xe # lz XE *1
+qmk compile -c -j 0 -kb matrix/m12og/rev1 -km nug # matrix 1.2og *1
 qmk compile -c -j 0 -kb matrix/m20add -km nug # matrix 2.0 additional *1
 qmk compile -c -j 0 -kb matrix/me -km nug # matrix me *1
 qmk compile -c -j 0 -kb noxary/280 -km nug # noxary 280 *2

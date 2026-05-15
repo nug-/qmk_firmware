@@ -6,6 +6,8 @@
 #define RSFT_UA RSFT_T(KC_UP)   /* Up arrow on tap, SHIFT on hold */
 #define RALT_LA RALT_T(KC_LEFT) /* Left arrow on tap, ALT on hold */
 #define RGUI_DA RGUI_T(KC_DOWN) /* Down arrow on tap, GUI on hold */
+#define MACRO0 LCTL(LALT(LSFT(KC_Z))) /* Discord deafen toggle, ctrl+alt+shift+z */
+#define MACRO1 LCTL(LALT(LSFT(KC_X))) /* Discord mute toggle, ctrl+alt+shift+x */
 
 enum layers {
   _L0 = 0,
@@ -58,27 +60,27 @@ void x_reset (tap_dance_state_t *state, void *user_data);
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_L0] = LAYOUT_tkl_ansi_tsangan(
     KC_ESC,       KC_F1,   KC_F2,   KC_F3,   KC_F4,     KC_F5,   KC_F6,   KC_F7,   KC_F8,     KC_F9,   KC_F10,  KC_F11,  KC_F12,      KC_PSCR, KC_SCRL, KC_PAUS,
-    KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC,     KC_INS,  KC_HOME, KC_PGUP,
+    QK_GESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC,     KC_INS,  KC_HOME, KC_PGUP,
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,     KC_DEL,  KC_END,  KC_PGDN,
-    KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,      KC_ENT,
-    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT,                       KC_UP,
-    KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                                               KC_RALT, MO(1),   KC_LCTL,     KC_LEFT, KC_DOWN, KC_RGHT
+    TD(TCAP), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,      KC_ENT,
+    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          RSFT_UA,                       KC_UP,
+    KC_LCTL, KC_LGUI, KC_LALT,                   LT_L1SP,                                               RALT_LA, RGUI_DA,   KC_LCTL,     KC_LEFT, KC_DOWN, KC_RGHT
   ),
   [_L1] = LAYOUT_tkl_ansi_tsangan(
-    KC_TRNS,     RGB_TOG, RGB_MOD, RGB_RMOD, KC_TRNS,   RGB_VAI, RGB_VAD, RGB_HUI, RGB_HUD,   RGB_SAI, RGB_SAD, RGB_SPI, RGB_SPD,     KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, QK_BOOT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLD, KC_VOLU, KC_MUTE, KC_MPRV, KC_MNXT, KC_MPLY,          KC_TRNS,                       KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
+    KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_GRV,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,     KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_CAPS,  KC_PGUP, KC_UP  , KC_PGDN, _______, _______, _______, _______, KC_PGUP, _______, _______, _______, _______, KC_INS,     KC_TRNS, KC_TRNS, KC_TRNS,
+    _______,  KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, KC_HOME, KC_PGDN, KC_END,  _______, _______,  KC_PSCR,
+    _______,    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_PGUP,             KC_PGUP,
+    _______,  _______, _______,                            _______,                            KC_HOME, KC_PGDN, KC_END,      KC_HOME, KC_PGDN, KC_END
   ),
   [_L2] = LAYOUT_tkl_ansi_tsangan(
-    KC_TRNS,     RGB_TOG, RGB_MOD, RGB_RMOD, KC_TRNS,   RGB_VAI, RGB_VAD, RGB_HUI, RGB_HUD,   RGB_SAI, RGB_SAD, RGB_SPI, RGB_SPD,     KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, QK_BOOT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLD, KC_VOLU, KC_MUTE, KC_MPRV, KC_MNXT, KC_MPLY,          KC_TRNS,                       KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS
+    KC_ESC,       KC_F1,   KC_F2,   KC_F3,   KC_F4,     KC_F5,   KC_F6,   KC_F7,   KC_F8,     KC_F9,   KC_F10,  KC_F11,  KC_F12,      MACRO0, MACRO1, KC_PAUS,
+    QK_GESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC,     KC_INS,  KC_HOME, KC_PGUP,
+    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,     KC_DEL,  KC_END,  KC_PGDN,
+    _______, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,      KC_ENT,
+    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT,                       KC_UP,
+    KC_LCTL, KC_NO, KC_LALT,                   KC_SPC,                                               KC_RALT, KC_RGUI,   KC_LCTL,     KC_LEFT, KC_DOWN, KC_RGHT
   ),
   [_L3] = LAYOUT_tkl_ansi_tsangan(
     KC_TRNS,     RGB_TOG, RGB_MOD, RGB_RMOD, KC_TRNS,   RGB_VAI, RGB_VAD, RGB_HUI, RGB_HUD,   RGB_SAI, RGB_SAD, RGB_SPI, RGB_SPD,     KC_TRNS, KC_TRNS, KC_TRNS,
@@ -155,20 +157,20 @@ tap_dance_action_t tap_dance_actions[] = {
   [TCAP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset)
 };
 
-bool led_update_user(led_t led_state) {
-    static uint8_t caps_state = 0;
-    if (caps_state != led_state.caps_lock) {
-        if (led_state.caps_lock) {
-            rgblight_sethsv_noeeprom(HSV_CYAN);
-            rgblight_mode_noeeprom(1);
-        } else {
-            rgblight_sethsv_noeeprom(5, 255, 255);
-            rgblight_mode_noeeprom(37);
-        }
-        caps_state = led_state.caps_lock;
-    }
-    return true;
-};
+//bool led_update_user(led_t led_state) {
+//    static uint8_t caps_state = 0;
+//    if (caps_state != led_state.caps_lock) {
+//        if (led_state.caps_lock) {
+//            rgblight_sethsv_noeeprom(HSV_CYAN);
+//            rgblight_mode_noeeprom(1);
+//        } else {
+//            rgblight_sethsv_noeeprom(5, 255, 255);
+//            rgblight_mode_noeeprom(37);
+//        }
+//        caps_state = led_state.caps_lock;
+//    }
+//    return true;
+//};
 
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
